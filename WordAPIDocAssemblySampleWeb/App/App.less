@@ -11,12 +11,14 @@
 // Reset default elements
 html,
 body {
+  // Use Fabric's typography mixin to set base font styles for document
   .ms-font-m();
   padding: 0;
   margin: 0;
 }
 
 a {
+  // Use Fabric's ms-Link component to style all <a> elements
   .ms-Link();
 }
 
@@ -95,7 +97,7 @@ a {
     left: 0;
     right: 0;
     bottom: @header-height;
-    overflow: scroll; /* Enable scrollbars within main content section */
+    overflow-y: scroll; /* Enable scrollbars within main content section */
 }
 
 
@@ -131,7 +133,7 @@ a {
 
 // Fabric NavBar overrides
 
-/*.ms-NavBar-item {
+.ms-NavBar-item {
     &:hover {
         .ms-Icon {
             color: @ms-color-themePrimary;
@@ -177,4 +179,4 @@ a {
 .ms-NavBar-item.ms-NavBar-item--right {
     float: right;
     margin: 0 0 0 20px;
-}*/
+}

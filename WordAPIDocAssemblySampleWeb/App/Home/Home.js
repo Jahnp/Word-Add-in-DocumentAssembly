@@ -49,10 +49,17 @@
             $('#teamBuilder').click(function showTb() { 
                 $('#tbPanel').show().addClass('ms-u-slideLeftIn40');                 
                 $('#sowPanel').hide().removeClass('ms-u-slideRightIn40 ms-u-slideLeftIn40'); 
+                $('#settingsPanel').hide().removeClass('ms-u-slideRightIn40 ms-u-slideLeftIn40'); 
+            });
+
+            $('#settings').click(function showTb() { 
+                $('#settingsPanel').show().addClass('ms-u-slideLeftIn40');                 
+                $('#sowPanel').hide().removeClass('ms-u-slideRightIn40 ms-u-slideLeftIn40'); 
+                $('#tbPanel').hide().removeClass('ms-u-slideRightIn40 ms-u-slideLeftIn40'); 
             });
 
             $('#docGen').click(function showDg() { 
-                $('#tbPanel').hide().removeClass('ms-u-slideLeftIn40');                     
+                $('#tbPanel').hide().removeClass('ms-u-slideLeftIn40'); $('#settingsPanel').hide().removeClass('ms-u-slideLeftIn40');
                 $('#sowPanel').show().addClass('ms-u-slideRightIn40'); 
             });
         });

@@ -16,14 +16,14 @@
 
     <!-- Fabric CDN link -->
     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.2.1/fabric.min.css">
-    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.2.1/fabric.components.min.css">
+    <!--<link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.2.1/fabric.components.min.css">-->
 
     <!-- Individual Fabric components -->
-    <!--<link rel="stylesheet" href="../../OfficeUIFabric/components/Button/Button.min.css">
+    <link rel="stylesheet" href="../../OfficeUIFabric/components/Button/Button.min.css">
     <link rel="stylesheet" href="../../OfficeUIFabric/components/Dropdown/Dropdown.min.css">
     <link rel="stylesheet" href="../../OfficeUIFabric/components/NavBar/NavBar.min.css">
     <link rel="stylesheet" href="../../OfficeUIFabric/components/TextField/TextField.min.css">
-    <link rel="stylesheet" href="../../OfficeUIFabric/components/Overlay/Overlay.min.css">--> 
+    <link rel="stylesheet" href="../../OfficeUIFabric/components/Overlay/Overlay.min.css"> 
 
     <!-- Fabric demonstrational JS -->
     <script src="../../OfficeUIFabric/components/NavBar/Jquery.NavBar.js" type="text/javascript"></script>
@@ -37,13 +37,16 @@
     <script src="Home.js" type="text/javascript"></script>
 </head>
 <body>
+    <!-- Main Header sectionn -->
     <div id="content-header">
         <i class="header-logo ms-Icon ms-Icon--page ms-fontSize-m ms-fontColor-themePrimary"></i>
         <h1 class="ms-font-l ms-fontColor-white">Contoso</h1> 
     </div>
 
+    <!-- Main Content section -->
     <div id="content-main">
-        <div class="ms-NavBar" style="display: none; position: static;">
+        <!-- NavBar from Fabric -->
+        <div class="ms-NavBar" style="display: none;">
             <div class="ms-NavBar-openMenu js-openMenu">
                 <i class="ms-Icon ms-Icon--menu"></i>
             </div>
@@ -58,16 +61,16 @@
         <div class="padding">
             <!-- First Run Experience -->
             <div id="firstRunPanel" class="ms-u-fadeIn200">
-                <h1 class="first-run-title ms-font-l ms-fontWeight-light">An add-in to help you build great-looking, full-featured documents quickly.</h1>
+                <h1 class="ms-font-l ms-fontWeight-light first-run-title">An add-in to help you build great-looking, full-featured documents quickly.</h1>
 
                 <div class="first-run-section">
-                    <i class="first-run-section-icon ms-Icon ms-Icon--document ms-fontColor-themePrimary ms-fontSize-su"></i>
+                    <i class="ms-Icon ms-Icon--document ms-fontColor-themePrimary ms-fontSize-su first-run-section-icon "></i>
                     <h2 class="ms-font-xl ms-fontWeight-light">Compose your document</h2>
                     <p class="ms-font-m ms-fontWeight-semilight">Select template features to make it quick and easy to assemble statements of work.</p>
                 </div>
 
                 <div class="first-run-section">
-                    <i class="first-run-section-icon ms-Icon ms-Icon--chart ms-fontColor-themePrimary ms-fontSize-su"></i>
+                    <i class="ms-Icon ms-Icon--chart ms-fontColor-themePrimary ms-fontSize-su first-run-section-icon"></i>
                     <h2 class="ms-font-xl ms-fontWeight-light">Build custom SmartArt</h2>
                     <p class="ms-font-m ms-fontWeight-semilight">Create custom SmartArt elements uniquely tailored to your team and project needs.</p>
                 </div>           
@@ -238,6 +241,39 @@
                 </button>
             </div>
 
+            <!-- Settings panel -->
+            <div id="settingsPanel" style="display: none;">
+                <h3 class="ms-font-xl">Settings</h3>
+
+                <div class="section-item">
+                    <div class="ms-TextField">
+                        <label class="ms-Label">Total Hours</label>
+                        <input class="ms-TextField-field" value="Alex Darrow">
+                    </div>
+                </div>
+
+                <div class="section-item">
+                    <div class="ms-Toggle">
+                      <span class="ms-Toggle-description">Let templates use my location</span>
+                      <input type="checkbox" class="ms-Toggle-input" checked="checked" />
+                      <label for="demo-toggle-3" class="ms-Toggle-field">
+                        <span class="ms-Label ms-Label--off">Off</span>
+                        <span class="ms-Label ms-Label--on">On</span>
+                      </label>
+                    </div>
+                </div>
+
+                <div class="section-item">
+                    <div class="ms-Toggle">
+                      <span class="ms-Toggle-description">Include company logo in template</span>
+                      <input type="checkbox" class="ms-Toggle-input" checked="checked" />
+                      <label for="demo-toggle-3" class="ms-Toggle-field">
+                        <span class="ms-Label ms-Label--off">Off</span>
+                        <span class="ms-Label ms-Label--on">On</span>
+                      </label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
